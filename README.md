@@ -1,4 +1,4 @@
-# 🛒 Laravel Online Store avec Panier
+# Laravel Online Store avec Panier
 
 Ce projet est une boutique en ligne de démonstration construite avec Laravel, intégrant Vite pour la gestion des assets, Bootstrap pour le design, un système d'administration, de gestion de produits, et un panier de base.
 
@@ -16,7 +16,7 @@ Ce projet est une boutique en ligne de démonstration construite avec Laravel, i
 
 ---
 
-## 📦 Fonctionnalités
+## Fonctionnalités
 
 - Authentification administrateur
 - CRUD Produits (admin)
@@ -42,7 +42,7 @@ DB_DATABASE=online_store
 DB_USERNAME=root
 DB_PASSWORD=secret
 Configurez les paramètres de votre serveur SMTP pour recevoir les emails du formulaire de contact dans Gmail :
-MAIL_FROM_ADDRESS="w.grami@gmail.com"
+MAIL_FROM_ADDRESS="votreCompte@gmail.com"
 MAIL_FROM_NAME="${APP_NAME}"
 # Configurez les paramètres de votre serveur SMTP
 MAIL_MAILER=smtp
