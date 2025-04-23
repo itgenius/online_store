@@ -36,7 +36,7 @@ Route::middleware([
 // Routes protégées par le middleware 'is_admin'
 Route::middleware(['auth', \App\Http\Middleware\IsAdmin::class])->prefix('admin')->group(function () {
     // Dashboard Admin
-    //Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+    Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
     
     // Routes de gestion des produits
     Route::get('/products', [ProductController::class, 'adminIndex'])->name('admin.products.index');
@@ -52,11 +52,10 @@ Route::middleware(['auth', \App\Http\Middleware\IsAdmin::class])->prefix('admin'
     Route::put('/users/{user}', [UserController::class, 'update'])->name('admin.users.update');
     Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('admin.users.destroy');
 
-    //Routes pour la gestion des commandes 
+    // Routes pour la gestion des commandes 
     Route::get('/orders', [OrderController::class, 'index'])->name('admin.orders.index');
     Route::get('/orders/{order}', [OrderController::class, 'show'])->name('admin.orders.show');
     Route::put('/orders/{order}/status', [OrderController::class, 'updateStatus'])->name('admin.orders.updateStatus');
-
 });
 
 // Route de profil
@@ -68,5 +67,3 @@ Route::get('/cart/add/{id}', [CartController::class, 'add'])->name('cart.add');
 Route::post('/cart/update/{id}', [CartController::class, 'update'])->name('cart.update');
 Route::post('/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
 Route::post('/cart/clear', [CartController::class, 'clear'])->name('cart.clear');
-
-
