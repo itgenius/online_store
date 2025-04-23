@@ -1,0 +1,22 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <img src="{{ $product['image'] }}" class="card-img-top" alt="{{ $product['name'] }}">
+                <div class="card-body">
+                    <h3 class="card-title">{{ $product['name'] }}</h3>
+                    <p class="card-text">{{ $product['description'] }}</p>
+                    <p class="fw-bold">Prix : {{ $product['price'] }}</p>
+                    <a href="#" class="btn btn-success">Ajouter au panier</a>
+                    <a href="{{ url('/products') }}" class="btn btn-secondary">← Retour à la liste</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
+
+

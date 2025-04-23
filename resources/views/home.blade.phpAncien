@@ -1,0 +1,59 @@
+@extends('layouts.app')
+
+@section('title', 'Page d\'accueil')
+
+@section('content')
+    <div class="text-center">
+        <h1 class="mb-4 title-blue">Bienvenue sur notre Boutique en ligne !</h1>
+        <p class="lead">Profitez de nos prix avantageux.</p>
+        <a href="/products" class="btn btn-custom-blue mt-3">Voir tous nos produits</a>    </div>
+
+    <!-- Section produits -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Nos Produits les plus vendus</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Produit 1 -->
+            <div class="col">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_1280.jpg" class="card-img-top" alt="Produit 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Nom du produit 1</h5>
+                        <p class="card-text">Description courte du produit. Lorem ipsum dolor sit amet.</p>
+                        <p class="price">Prix: 599,99 €</p>
+                        <a href="#" class="btn btn-success">Ajouter au panier</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 2 -->
+            <div class="col">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2015/02/02/15/28/bar-621033_1280.jpg" class="card-img-top" alt="Produit 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Nom du produit 2</h5>
+                        <p class="card-text">Description courte du produit. Lorem ipsum dolor sit amet.</p>
+                        <p class="price">Prix: 249,99 €</p>
+                        <a href="#" class="btn btn-success">Ajouter au panier</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 3 -->
+            <div class="col">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2018/05/01/13/04/miniature-3365503_1280.jpg" class="card-img-top" alt="Produit 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Nom du produit 3</h5>
+                        <p class="card-text">Description courte du produit. Lorem ipsum dolor sit amet.</p>
+                        <p class="price">Prix: 199,99 €</p>
+                        <a href="#" class="btn btn-success">Ajouter au panier</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+
+
+
+

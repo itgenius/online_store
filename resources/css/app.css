@@ -1,0 +1,86 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+/* === Personnalisation des couleurs Bootstrap via CSS variables === */
+:root {
+    --bs-primary: #2e59d9;        /* Bleu personnalisé */
+    --bs-secondary: #858796;
+    --bs-success: #1cc88a;
+    --bs-info: #36b9cc;
+    --bs-warning: #f6c23e;
+    --bs-danger: #e74a3b;
+    --bs-light: #f8f9fc;
+    --bs-dark: #343a40;
+}
+
+/* === Style général === */
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: var(--bs-light);
+    color: var(--bs-dark);
+    margin: 0; 
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* === Footer === */
+footer,
+footer.bg-dark {
+    background-color: #2e59d9 !important;
+    padding: 1rem;
+    color: white;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+/* === Navbar === */
+.navbar {
+    background-color: #2e59d9 !important; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 0;
+    padding: 0.75rem 1rem;
+}
+
+/* === Lien dans navbar === */
+.navbar .nav-link {
+    color: white !important; 
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #f8f9fc !important;
+    text-decoration: underline;
+}
+
+/* === Boutons === */
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #244dc1;
+    border-color: #2149b8;
+}
+
+/* === Cartes === */
+.card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+}
+
+/* === Titres === */
+h1, h2, h3, h4, h5 {
+    color: var(--bs-dark);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+}
