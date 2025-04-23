@@ -9,6 +9,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\UserController;
 
 Route::get('/', function () {
     $latestProducts = Product::orderBy('created_at', 'desc')->take(3)->get();
@@ -32,10 +33,13 @@ Route::middleware([
 });
 
 // Routes protégées par le middleware 'is_admin'
-Route::middleware(['auth', \App\Http\Middleware\IsAdmin::class])->prefix('admin')->group(function () {
-    // Dashboard Admin
-    //Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
-    
+    Route::middleware(['auth', \App\Http\Middleware\IsAdmin::class])->prefix('admin')->group(function () {
+    // Gestion des utilisateurs
+    Route::get('/users', [UserController::class, 'index'])->name('admin.users.index');
+    Route::get('/users/{user}/edit', [UserController::class, 'edit'])->name('admin.users.edit');
+    Route::put('/users/{user}', [UserController::class, 'update'])->name('admin.users.update');
+    Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('admin.users.destroy');
+
     // Routes de gestion des produits
     Route::get('/products', [ProductController::class, 'adminIndex'])->name('admin.products.index');
     Route::get('/products/create', [ProductController::class, 'create'])->name('admin.products.create');
