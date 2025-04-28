@@ -42,6 +42,8 @@
                         </td>
                         <td>{{ $details['price'] }} €</td>
                         <td>{{ $subtotal }} €</td>
+                        
+                        
                         <td>
                             <form action="{{ route('cart.remove', $id) }}" method="POST">
                                 @csrf
@@ -54,6 +56,10 @@
         </table>
 
         <h4>Total : {{ $total }} €</h4>
+        <form action="{{ route('cart.checkout') }}" method="POST" class="mt-3">
+            @csrf
+            <button class="btn btn-success">Commandez</button>
+        </form>
     @else
         <p>Votre panier est vide.</p>
     @endif

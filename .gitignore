@@ -36,5 +36,4 @@ Homestead.yaml
 /.fleet
 /.nova
 /.zed
-
-
+.vs/
