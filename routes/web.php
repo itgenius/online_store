@@ -69,4 +69,9 @@ Route::post('/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.
 Route::post('/cart/clear', [CartController::class, 'clear'])->name('cart.clear');
 // Passer une commande :
 Route::post('/cart/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
+// Route statut de la commande
+Route::patch('/admin/orders/{order}', [OrderController::class, 'updateOrderStatus'])->name('admin.orders.update');
+Route::post('/orders/{id}/update-status', [OrderController::class, 'updateStatus'])->name('orders.updateStatus');
+
+
 

@@ -8,6 +8,8 @@
     <p>{{ $product->description }}</p>
     <p class="fw-bold">Prix : {{ $product->price }} €</p>    
     {{-- <a href="#" class="btn btn-success">Ajouter au panier</a> --}}
+    <p class="text-muted">Stock disponible : {{ $product->stock }}</p>
+
     <a href="{{ route('cart.add', $product->id) }}" class="btn btn-success">Ajouter au panier</a>
 
     <a href="{{ url('/products') }}" class="btn btn-secondary">Retour à la liste</a>

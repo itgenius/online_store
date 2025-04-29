@@ -12,6 +12,8 @@
                         <h5 class="card-title">{{ $product->name }}</h5>
                         <p class="card-text">{{ $product->description }}</p>
                         <p class="price fw-bold mb-3">Prix: {{ $product->price }} €</p>
+                        <p class="text-muted">Stock disponible : {{ $product->stock }}</p>
+
                         <a href="{{ url('/products/' . $product->id) }}" class="btn btn-primary">Voir les détails</a>
                     </div>
                 </div>
